@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CrimeShield - Check Complaint Status</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/check_status.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="citizen_dashboard.html" class="logo">
+        <img src="images/ashok_pillar.jpg" alt="Ashok Pillar">
+        <span class="crime-title">CrimeShield</span>
+    </a>
+
+    <ul class="nav-links">
+        <li><a href="citizen_dashboard.html">Home</a></li>
+    </ul>
+
+    <button class="login-btn" id="logoutBtn">Logout</button>
+</div>
+
+<!-- PAGE CONTENT -->
+<div class="page-content" id="pageContent">
+
+    <div class="form-container">
+        <h2>Check <strong>Complaint Status</strong></h2>
+
+        <form id="statusForm">
+            <label>Enter Mobile Number</label>
+            <input type="text" id="mobileInput" required>
+
+            <button type="submit" class="submit-btn">
+                Check Status
+            </button>
+        </form>
+
+        <div id="results"></div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 <strong>CrimeShield</strong>. All Rights Reserved.</p>
+        <p>Made by <strong>Kavya Mehta</strong> & <strong>Divyansh Mittal</strong></p>
+    </footer>
+
+</div>
+
+<script src="js/check_status.js"></script>
+
+</body>
+</html>

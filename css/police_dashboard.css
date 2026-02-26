@@ -1,0 +1,496 @@
+/* GLOBAL RESPONSIVE RESET */
+html {
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* BACKGROUND */
+body {
+    background: url('https://st.depositphotos.com/1147338/57576/i/450/depositphotos_575764566-stock-photo-indian-police-hat-table.jpg')
+        no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+
+    background-color: #003366;
+    color: white;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.logo img {
+    width: 38px;
+    margin-right: 10px;
+}
+
+.crime-title {
+    letter-spacing: 1px;
+}
+
+/* NAV LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #ff6600;
+    padding-bottom: 4px;
+}
+
+/* LOGOUT BUTTON */
+.login-btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+}
+
+/* PAGE OFFSET */
+.page-content {
+    padding-top: 100px;
+    text-align: center;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* GREETING */
+.container {
+    margin-bottom: 20px;
+}
+
+.greeting {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+/* SECTION */
+.service-section {
+    width: 85%;
+    margin: 20px auto;
+    background: transparent;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.service-section h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* BUTTONS */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.action-btn {
+    background-color: #ff6600;
+    color: white;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 260px;
+    transition: transform 0.2s ease;
+}
+
+.action-btn:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   CLEAN DATABASE TABLE
+========================= */
+
+#databaseContent {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.clean-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.clean-table thead {
+    background-color: #003366;
+    color: white;
+}
+
+.clean-table th,
+.clean-table td {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.clean-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.clean-table tbody tr:hover {
+    background-color: #e6eef7;
+}
+
+/* STATUS BADGES */
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.status-PENDING {
+    background-color: #999999;
+}
+
+.status-IN_PROGRESS {
+    background-color: #ff6600;
+}
+
+.status-RESOLVED {
+    background-color: #2e8b57;
+}
+
+.status-ACTIVE {
+    background-color: red;
+}
+
+/* VIDEO LINK */
+
+.video-link {
+    color: #003366;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.video-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   MAP SECTION
+========================= */
+
+#mapContainer {
+    width: 85%;
+    height: 450px;
+    margin: 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#policeMap {
+    width: 100%;
+    height: 100%;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #003366;
+    color: white;
+    padding: 18px;
+    margin-top: auto;
+}
+
+.footer p {
+    font-size: 15px;
+    margin: 4px 0;
+}
+
+/* PAGE ANIMATION */
+.page-fade-out {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+/* ============================= */
+/* POLICE FORM STYLING */
+/* ============================= */
+
+.form-card {
+    width: 420px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-card input,
+.form-card textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    width: 100%;
+}
+
+.form-card textarea {
+    resize: none;
+    height: 90px;
+}
+
+.location-row {
+    display: flex;
+    gap: 10px;
+}
+
+.location-row input {
+    flex: 1;
+}
+/* ================= MOBILE NAVBAR ================= */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav-links {
+        position: static;
+        transform: none;
+        margin-top: 5px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .login-btn {
+        width: 100%;
+    }
+
+    .page-content {
+        padding-top: 130px;
+    }
+}
+@media (max-width: 768px) {
+
+    .button-container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .action-btn {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+
+    .form-card {
+        width: 92%;
+        padding: 20px;
+    }
+
+    .location-row {
+        flex-direction: column;
+    }
+
+    .form-card input,
+    .form-card textarea {
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+}
+@media (max-width: 768px) {
+    .footer {
+        font-size: 13px;
+        padding: 15px;
+    }
+}
+/* ================================================= */
+/*              GLOBAL MOBILE SUPPORT               */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- NAVBAR ---------- */
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav-links {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .login-btn {
+        width: 100%;
+    }
+
+    .page-content {
+        padding-top: 130px;
+    }
+
+    /* ---------- HEADINGS ---------- */
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    /* ---------- BUTTONS ---------- */
+    .button-container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .action-btn {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    /* ---------- FORMS ---------- */
+    .form-card,
+    .police-form {
+        width: 92%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .location-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* ---------- TABLES ---------- */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    /* ---------- SERVICE SECTION ---------- */
+    .service-section {
+        width: 95%;
+        padding: 15px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+        font-size: 13px;
+        padding: 15px;
+        text-align: center;
+    }
+}

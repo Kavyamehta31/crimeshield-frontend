@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrimeShield - Citizen Dashboard</title>
+
+    <link rel="stylesheet" href="css/citizen_dashboard.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a href="citizen_dashboard.html" class="logo">
+            <img src="images/ashok_pillar.jpg" alt="Ashok Pillar">
+            <span class="crime-title">CrimeShield</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="citizen_dashboard.html" class="active">Home</a></li>
+        </ul>
+
+        <button class="login-btn" id="logoutBtn">Logout</button>
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="page-content" id="pageContent">
+
+        <!-- HERO -->
+        <div class="container">
+            <div class="tagline">
+                Namaste <strong id="usernameDisplay"></strong>
+            </div>
+            <p class="emergency-note">
+                Access official services to <strong>report incidents</strong>,
+                monitor complaint progress, and stay aware of
+                <strong>crime activity</strong>.
+            </p>
+        </div>
+
+        <!-- SERVICES -->
+        <div class="info-section center">
+            <h2>Available <strong>Services</strong></h2>
+
+            <div class="service-buttons">
+                <button onclick="location.href='report.html'">
+                    Report Complaint
+                </button>
+
+                <button onclick="location.href='check_status.html'">
+                    Check Complaint Status
+                </button>
+
+                <button onclick="location.href='citizen_sos.html'">
+                    Upload Live Crime
+                </button>
+            </div>
+        </div>
+
+        <!-- HEATMAP -->
+        <div class="info-section">
+            <h2>Crime <strong>Heat Map</strong></h2>
+            <div id="map"></div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>© 2026 <strong>CrimeShield</strong>. All Rights Reserved.</p>
+            <p>Made by <strong>Kavya Mehta</strong> & <strong>Divyansh Mittal</strong></p>
+        </footer>
+
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- Heatmap Plugin (VERY IMPORTANT) -->
+    <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+
+    <!-- Your JS -->
+    <script src="js/citizen_dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* BACKGROUND */
+body {
+    background: url('https://c4.wallpaperflare.com/wallpaper/491/944/882/men-hands-handcuffed-wallpaper-preview.jpg')
+        no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: -1;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #003366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.logo {
+    position: absolute;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 38px;
+    margin-right: 10px;
+}
+
+.crime-title {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* PAGE CONTENT */
+.page-content {
+    min-height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* LOGIN BOX */
+.login-box {
+    background: rgba(255,255,255,0.96);
+    width: 360px;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.login-box h2 {
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+/* BUTTON */
+.primary-btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.primary-btn:hover {
+    background-color: #cc5500;
+}
+
+/* INFO */
+.info-text {
+    margin-top: 14px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* FOOTER */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #003366;
+    color: white;
+    padding: 16px;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 14px;
+    margin: 3px 0;
+}
+
+/* PAGE TRANSITION */
+.page-fade-out {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}

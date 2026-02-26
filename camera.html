@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CrimeShield - SOS Camera</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- MAIN UI STYLE -->
+    <link rel="stylesheet" href="css/camera.css">
+</head>
+<body>
+
+<!-- FIXED NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <img src="images/ashok_pillar.jpg" alt="Ashok Pillar">
+        <span class="crime-title">CrimeShield</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Citizen_Laws.html">Citizen Laws</a></li>
+        <li><a href="Contacts.html">Contacts</a></li>
+    </ul>
+
+    <button class="login-btn" data-link="login_page.html">
+        Login
+    </button>
+</div>
+
+<!-- PAGE CONTENT -->
+<div class="page-content" id="pageContent">
+
+    <div class="camera-container">
+        <h1>SOS <strong>Activated</strong></h1>
+
+        <video id="video" autoplay muted></video>
+
+        <p class="status-text" id="status">
+            Initializing emergency services...
+        </p>
+
+        <button class="stop-btn">
+            Stop & Upload Evidence
+        </button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 <strong>CrimeShield</strong>. All Rights Reserved.</p>
+        <p>Made by <strong>Kavya Mehta</strong> & <strong>Divyansh Mittal</strong></p>
+    </footer>
+
+</div>
+
+<script src="js/camera.js"></script>
+</body>
+</html>

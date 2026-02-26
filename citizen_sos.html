@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CrimeShield - Citizen SOS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/citizen_sos.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="citizen_dashboard.html" class="logo">
+        <img src="images/ashok_pillar.jpg" alt="Ashok Pillar">
+        <span class="crime-title">CrimeShield</span>
+    </a>
+
+    <ul class="nav-links">
+        <li><a href="citizen_dashboard.html" class="active">Home</a></li>
+    </ul>
+
+    <button class="login-btn" id="logoutBtn">Logout</button>
+</div>
+
+<!-- PAGE -->
+<div class="page-content" id="pageContent">
+
+    <div class="container">
+        <div class="tagline">
+            Namaste <strong id="usernameDisplay"></strong>
+        </div>
+        <p class="emergency-note">
+            Emergency recording is active. Your
+            <strong>location</strong> and <strong>evidence</strong>
+            will be shared with authorities.
+        </p>
+    </div>
+
+    <!-- CAMERA AREA -->
+    <div class="camera-container">
+        <h1>SOS <strong>Activated</strong></h1>
+
+        <video id="video" autoplay muted></video>
+
+        <p class="status-text" id="status">
+            Initializing emergency services...
+        </p>
+
+        <button class="stop-btn">
+            Stop & Upload Evidence
+        </button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 <strong>CrimeShield</strong>. All Rights Reserved.</p>
+        <p>Made by <strong>Kavya Mehta</strong> & <strong>Divyansh Mittal</strong></p>
+    </footer>
+
+</div>
+
+<script src="js/camera.js"></script>
+<script src="js/citizen_sos.js"></script>
+
+</body>
+</html>

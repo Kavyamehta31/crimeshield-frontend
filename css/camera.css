@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    background: url('https://c4.wallpaperflare.com/wallpaper/491/944/882/men-hands-handcuffed-wallpaper-preview.jpg')
+        no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    background-color: #003366;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 38px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.login-btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* PAGE CONTENT */
+.page-content {
+    padding-top: 100px;
+    text-align: center;
+}
+
+/* CAMERA SECTION */
+.camera-container {
+    width: 85%;
+    max-width: 600px;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.camera-container h1 {
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #003366;
+    margin-bottom: 12px;
+}
+
+.status-text {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* STOP BUTTON */
+.stop-btn {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #003366;
+    color: white;
+    padding: 18px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* PAGE TRANSITION */
+.page-fade-out {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}

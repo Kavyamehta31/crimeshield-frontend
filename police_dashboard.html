@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrimeShield - Police Dashboard</title>
+
+    <link rel="stylesheet" href="css/police_dashboard.css">
+
+    <!-- LEAFLET -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+
+    <!-- FIXED NAVBAR -->
+    <div class="navbar">
+        <a href="police_dashboard.html" class="logo">
+            <img src="images/ashok_pillar.jpg" alt="Ashok Pillar">
+            <span class="crime-title">CrimeShield</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="police_dashboard.html" class="active">Home</a></li>
+        </ul>
+
+        <button class="login-btn" id="logoutBtn">
+            Logout
+        </button>
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="page-content" id="pageContent">
+
+        <!-- GREETING -->
+        <div class="container">
+            <div class="greeting">
+                Namaste <span id="officerName"></span>
+            </div>
+        </div>
+
+        <!-- OPERATIONS -->
+        <div class="service-section">
+            <h2>Police <strong>Operations</strong></h2>
+
+            <div class="button-container">
+    <button class="action-btn" id="loadComplaintsBtn">
+        Open Crime Database
+    </button>
+
+    <button class="action-btn" id="loadSOSBtn">
+        View SOS Alerts
+    </button>
+
+    <button class="action-btn"
+            onclick="window.location.href='police_file_complaint.html'">
+        File Complaint (On Behalf of Victim)
+    </button>
+</div>
+        </div>
+
+        <!-- DATABASE DISPLAY AREA -->
+        <div class="service-section" id="databaseSection" style="display:none;">
+            <h2>Database <strong>Records</strong></h2>
+            <div id="databaseContent"></div>
+        </div>
+
+        <!-- MAP SECTION -->
+        <div id="mapContainer">
+            <div id="policeMap"></div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>© 2026 <strong>CrimeShield</strong>. All Rights Reserved.</p>
+            <p>Made by <strong>Kavya Mehta</strong> & <strong>Divyansh Mittal</strong></p>
+        </footer>
+
+    </div>
+
+    <!-- LEAFLET JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script src="js/police_dashboard.js"></script>
+</body>
+</html>

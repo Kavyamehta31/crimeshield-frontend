@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY & BACKGROUND */
+body {
+    background: url('https://c4.wallpaperflare.com/wallpaper/491/944/882/men-hands-handcuffed-wallpaper-preview.jpg')
+        no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+
+    background-color: #003366;
+    color: white;
+}
+
+/* LOGO (CLICKABLE, SAME AS HOME) */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 38px;
+    margin-right: 10px;
+}
+
+.crime-title {
+    letter-spacing: 1px;
+    color: white;
+}
+
+/* CENTER NAV LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* ACTIVE PAGE UNDERLINE */
+.nav-links a.active {
+    border-bottom: 2px solid #ff6600;
+    padding-bottom: 4px;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* PAGE CONTENT OFFSET */
+.page-content {
+    padding-top: 90px;
+    text-align: center;
+}
+
+/* INTRO SECTION (LIKE HOME) */
+.container {
+    margin-top: 40px;
+}
+
+.tagline {
+    font-size: 27px;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.emergency-note {
+    color: #ffdada;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+/* CONTENT SECTIONS */
+.info-section,
+.rights-section {
+    margin: 30px auto;
+    width: 82%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 22px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.info-section h2,
+.rights-section h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.info-section p {
+    font-size: 18px;
+    line-height: 1.75;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.info-section ul,
+.rights-section ul {
+    font-size: 18px;
+    line-height: 1.75;
+    color: #222;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #003366;
+    color: white;
+    padding: 18px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 15px;
+    margin: 4px 0;
+}
+
+/* PAGE TRANSITION — SAME AS HOME (THIS WAS MISSING BEFORE) */
+.page-fade-out {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrimeShield - Citizen Login</title>
+
+    <link rel="stylesheet" href="css/citizen_login.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo" data-link="index.html">
+            <img src="images/ashok_pillar.jpg" alt="Ashok Pillar">
+            <span class="crime-title">CrimeShield</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Citizen_Laws.html">Citizen Laws</a></li>
+            <li><a href="Contacts.html">Contacts</a></li>
+        </ul>
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="page-content" id="pageContent">
+
+        <div class="login-box">
+            <h2>Citizen Login</h2>
+
+            <input type="text" id="citizenName" placeholder="Full Name">
+            <input type="text" id="citizenMobile" placeholder="Mobile Number">
+
+            <button class="primary-btn" id="sendOtpBtn">
+                Send OTP
+            </button>
+
+            <input type="text" id="citizenOtp"
+                   placeholder="Enter OTP"
+                   class="hidden">
+
+            <button class="primary-btn hidden" id="verifyOtpBtn">
+                Verify OTP
+            </button>
+
+            <p class="info-text">
+                OTP verification ensures <strong>secure citizen access</strong>
+            </p>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>© 2026 <strong>CrimeShield</strong>. All Rights Reserved.</p>
+            <p>Made by <strong>Kavya Mehta</strong> & <strong>Divyansh Mittal</strong></p>
+        </footer>
+
+    </div>
+
+    <script src="js/citizen_login.js"></script>
+</body>
+</html>

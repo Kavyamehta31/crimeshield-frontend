@@ -1,0 +1,275 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* BACKGROUND */
+body{
+    background:url('https://c4.wallpaperflare.com/wallpaper/491/944/882/men-hands-handcuffed-wallpaper-preview.jpg')
+    no-repeat center center fixed;
+    background-size:cover;
+    min-height:100vh;
+    position:relative;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.55);
+    z-index:-1;
+}
+
+/* NAVBAR */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:70px;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 30px;
+    background:#003366;
+    color:white;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    font-size:21px;
+    font-weight:bold;
+    color:white;
+    text-decoration:none;
+}
+
+.logo img{
+    width:38px;
+    margin-right:10px;
+}
+
+.crime-title{
+    letter-spacing:1px;
+}
+
+/* CENTER LINKS */
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:28px;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+}
+
+.nav-links a.active{
+    border-bottom:2px solid #ff6600;
+    padding-bottom:4px;
+}
+
+/* LOGOUT */
+.login-btn{
+    background:#ff6600;
+    color:white;
+    padding:9px 18px;
+    border:none;
+    border-radius:6px;
+    font-size:15px;
+    cursor:pointer;
+}
+
+/* PAGE OFFSET */
+.page-content{
+    padding-top:90px;
+    text-align:center;
+}
+
+/* HERO */
+.container{
+    margin-top:40px;
+}
+
+.tagline{
+    font-size:27px;
+    color:white;
+    margin-bottom:12px;
+}
+
+.emergency-note{
+    color:#ffdada;
+    font-size:16px;
+}
+
+/* SECTIONS – TRANSPARENT */
+.info-section{
+    margin:30px auto;
+    width:82%;
+    background:transparent;
+    padding:22px;
+    border-radius:10px;
+    text-align:left;
+}
+
+.info-section.center{
+    text-align:center;
+}
+
+.info-section h2{
+    text-align:center;
+    color:white;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+/* BUTTONS */
+.service-buttons{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.service-buttons button{
+    width:260px;
+    padding:12px;
+    margin:8px 0;
+    border:none;
+    border-radius:8px;
+    background:#ff6600;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.service-buttons button:hover{
+    transform:scale(1.03);
+}
+
+/* MAP */
+#map{
+    width:100%;
+    height:400px;
+    border-radius:8px;
+}
+
+/* FOOTER */
+.footer{
+    background:#003366;
+    color:white;
+    padding:18px;
+    margin-top:40px;
+    text-align:center;
+}
+
+/* FADE */
+.page-fade-out{
+    opacity:0;
+    transform:translateY(12px);
+    transition:opacity 0.45s ease, transform 0.45s ease;
+}
+/* ================================================= */
+/*              GLOBAL MOBILE SUPPORT               */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- NAVBAR ---------- */
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav-links {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .login-btn {
+        width: 100%;
+    }
+
+    .page-content {
+        padding-top: 130px;
+    }
+
+    /* ---------- HEADINGS ---------- */
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    /* ---------- BUTTONS ---------- */
+    .button-container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .action-btn {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    /* ---------- FORMS ---------- */
+    .form-card,
+    .police-form {
+        width: 92%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .location-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* ---------- TABLES ---------- */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    /* ---------- SERVICE SECTION ---------- */
+    .service-section {
+        width: 95%;
+        padding: 15px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+        font-size: 13px;
+        padding: 15px;
+        text-align: center;
+    }
+}
