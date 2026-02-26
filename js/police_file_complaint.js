@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const response = await fetch(
-            "http://127.0.0.1:8000/api/police/complaints/police-create/",
+            "http://crimeshield-backend.onrender.com/api/police/complaints/police-create/",
             {
                 method: "POST",
                 headers: {

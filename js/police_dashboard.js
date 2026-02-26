@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         clearMarkers();
 
         const response = await fetch(
-            "http://127.0.0.1:8000/api/police/complaints/all/",
+            "http://crimeshield-backend.onrender.com/api/police/complaints/all/",
             {
                 headers: {
                     "Authorization": "Bearer " + token
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         clearMarkers();
 
         const response = await fetch(
-            "http://127.0.0.1:8000/api/sos/all/",
+            "http://crimeshield-backend.onrender.com/api/sos/all/",
             {
                 headers: {
                     "Authorization": "Bearer " + token
@@ -253,7 +253,7 @@ async function updateComplaint(id, status) {
 
     const token = localStorage.getItem("policeToken");
 
-    await fetch("http://127.0.0.1:8000/api/police/complaints/update-status/", {
+    await fetch("http://crimeshield-backend.onrender.com/api/police/complaints/update-status/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -273,7 +273,7 @@ async function updateSOS(id, status) {
 
     const token = localStorage.getItem("policeToken");
 
-    await fetch("http://127.0.0.1:8000/api/sos/update-status/", {
+    await fetch("http://crimeshield-backend.onrender.com/api/sos/update-status/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
