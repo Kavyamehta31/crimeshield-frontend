@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         navigator.geolocation.getCurrentPosition(position => {
 
-            fetch("http://crimeshield-backend.onrender.com/api/police/complaints/create/", {
+            fetch("https://crimeshield-backend.onrender.com/api/police/complaints/create/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

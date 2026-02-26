@@ -11,7 +11,7 @@ btn.addEventListener("click", async () => {
     }
 
     try {
-        const response = await fetch("http://crimeshield-backend.onrender.com/api/police/login/", {
+        const response = await fetch("https://crimeshield-backend.onrender.com/api/police/login/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

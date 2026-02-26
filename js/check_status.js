@@ -69,13 +69,13 @@ document.addEventListener("DOMContentLoaded", function () {
         resultsDiv.innerHTML = "Checking records...";
 
         Promise.all([
-            fetch("http://crimeshield-backend.onrender.com/api/police/complaints/status/", {
+            fetch("https://crimeshield-backend.onrender.com/api/police/complaints/status/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ mobile_number: mobile })
             }).then(res => res.json()),
 
-            fetch("http://crimeshield-backend.onrender.com/api/sos/status/", {
+            fetch("https://crimeshield-backend.onrender.com/api/sos/status/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ mobile_number: mobile })

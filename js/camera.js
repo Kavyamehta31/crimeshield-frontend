@@ -67,7 +67,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
                 position => {
-                    fetch("http://crimeshield-backend.onrender.com/api/sos/start/", {
+                    fetch("https://crimeshield-backend.onrender.com/api/sos/start/", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({
@@ -123,7 +123,7 @@ if (stopBtn) {
             formData.append("video", videoBlob);
             formData.append("sos_id", sosId);
 
-            fetch("http://crimeshield-backend.onrender.com/api/sos/upload-video/", {
+            fetch("https://crimeshield-backend.onrender.com/api/sos/upload-video/", {
                 method: "POST",
                 body: formData
             })
