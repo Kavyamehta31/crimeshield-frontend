@@ -1,3 +1,4 @@
+console.log("Police login JS loaded");
 const btn = document.getElementById("policeLoginBtn");
 
 btn.addEventListener("click", async () => {
@@ -41,4 +42,5 @@ btn.addEventListener("click", async () => {
         console.error(err);
         alert("Server error. Is Django running?");
     }
+
 });
