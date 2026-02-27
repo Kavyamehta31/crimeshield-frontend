@@ -2,14 +2,11 @@ console.log("Police login JS loaded");
 const btn = document.getElementById("policeLoginBtn");
 
 btn.addEventListener("click", async () => {
-    console.log("Login button clicked");
-    const username = document.getElementById("policeUsername").value.trim();
-    const password = document.getElementById("policePassword").value.trim();
 
-    if (!username || !password) {
-        alert("Please enter username and password");
-        return;
-    }
+    console.log("Login button clicked");
+
+    const username = document.getElementById("policeUsername").value;
+    const password = document.getElementById("policePassword").value;
 
     try {
         const response = await fetch("https://crimeshield-backend.onrender.com/api/police/login/", {
@@ -20,28 +17,22 @@ btn.addEventListener("click", async () => {
             body: JSON.stringify({ username, password })
         });
 
+        console.log("Response status:", response.status);
+
         const data = await response.json();
 
+        console.log("Response data:", data);
+
         if (response.ok) {
-
-            // 🔐 STORE TOKEN
-            localStorage.setItem("policeToken", data.token);
-
-            // 👮 STORE USERNAME
-            localStorage.setItem("policeUsername", data.username);
-
             alert("Login successful");
-
             window.location.href = "police_dashboard.html";
-
         } else {
             alert(data.error || "Login failed");
         }
 
     } catch (err) {
-        console.error(err);
-        alert("Server error. Is Django running?");
+        console.error("Fetch error:", err);
     }
-
 });
+
 
