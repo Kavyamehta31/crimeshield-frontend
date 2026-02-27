@@ -2,7 +2,7 @@ console.log("Police login JS loaded");
 const btn = document.getElementById("policeLoginBtn");
 
 btn.addEventListener("click", async () => {
-
+    console.log("Login button clicked");
     const username = document.getElementById("policeUsername").value.trim();
     const password = document.getElementById("policePassword").value.trim();
 
@@ -44,3 +44,4 @@ btn.addEventListener("click", async () => {
     }
 
 });
+
